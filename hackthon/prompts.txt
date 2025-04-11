@@ -1,0 +1,146 @@
+# Coding Prompts
+1. "Write a function that takes a list of numbers and returns the sum of all even numbers."
+2. "Create a class that represents a bank account with deposit, withdraw, and check balance methods."
+3. "Implement a sorting algorithm of your choice and explain its time complexity."
+4. "Write a program that checks if a given string is a palindrome."
+5. "Create a simple REST API endpoint that returns the current time."
+
+# Debugging Prompts
+1. "My code is throwing a null pointer exception. How can I fix it?"
+2. "The program is running slower than expected. How can I optimize it?"
+3. "I'm getting a 404 error on my API endpoint. What could be wrong?"
+4. "My database query is timing out. How can I improve its performance?"
+5. "The UI is not updating when the data changes. What's the issue?"
+
+# Learning Prompts
+1. "Explain the concept of object-oriented programming in simple terms."
+2. "What are the differences between SQL and NoSQL databases?"
+3. "How does the HTTP protocol work?"
+4. "Explain the concept of recursion with examples."
+5. "What are design patterns and why are they important?"
+
+# Problem Solving Prompts
+1. "How would you design a system to handle millions of concurrent users?"
+2. "What's the best way to implement a search feature in a large dataset?"
+3. "How would you ensure data consistency in a distributed system?"
+4. "What's the most efficient way to store and retrieve user sessions?"
+5. "How would you implement a real-time chat application?"
+
+# Testing Prompts
+1. "Write unit tests for a function that calculates the factorial of a number."
+2. "How would you test a web application for cross-browser compatibility?"
+3. "What test cases should be considered for a login system?"
+4. "How would you implement integration tests for a microservice architecture?"
+5. "What are some best practices for writing testable code?"
+
+# Security Prompts
+1. "How can I prevent SQL injection in my application?"
+2. "What are the best practices for storing user passwords?"
+3. "How can I implement proper authentication and authorization?"
+4. "What security measures should be taken for a public API?"
+5. "How can I protect against cross-site scripting (XSS) attacks?"
+
+# Architecture Prompts
+1. "What are the advantages of microservices over monolithic architecture?"
+2. "How would you design a scalable cloud-based application?"
+3. "What are the key components of a modern web application architecture?"
+4. "How would you implement caching in a distributed system?"
+5. "What are the best practices for API versioning?"
+
+# DevOps Prompts
+1. "How would you set up a CI/CD pipeline for a web application?"
+2. "What are the best practices for containerizing applications?"
+3. "How would you implement monitoring and logging in a production environment?"
+4. "What are the key considerations for deploying a database migration?"
+5. "How would you handle rollbacks in a production deployment?"
+
+# Data Science Prompts
+1. "How would you clean and preprocess a dataset for machine learning?"
+2. "What are the key differences between supervised and unsupervised learning?"
+3. "How would you evaluate the performance of a machine learning model?"
+4. "What are the best practices for feature engineering?"
+5. "How would you handle imbalanced datasets in classification problems?"
+
+# Frontend Development Prompts
+1. "How would you implement responsive design for a web application?"
+2. "What are the best practices for state management in React?"
+3. "How would you optimize the performance of a web application?"
+4. "What are the key considerations for accessibility in web development?"
+5. "How would you implement a progressive web app (PWA)?"
+
+# Backend Development Prompts
+1. "How would you implement rate limiting in an API?"
+2. "What are the best practices for handling file uploads?"
+3. "How would you implement background jobs in a web application?"
+4. "What are the key considerations for database indexing?"
+5. "How would you implement real-time updates using WebSockets?"
+
+# Career Exploration
+1. "What are the best career paths for someone interested in technology?"
+2. "How do I choose between different career options?"
+3. "What are the emerging careers in the tech industry?"
+4. "How can I explore different career options?"
+5. "What are the highest paying careers in technology?"
+
+# Resume and Cover Letter
+1. "How do I write a strong resume for a tech job?"
+2. "What should I include in my cover letter?"
+3. "How do I highlight my technical skills on my resume?"
+4. "What are the common mistakes to avoid in a tech resume?"
+5. "How do I tailor my resume for different tech roles?"
+
+# Job Search
+1. "What are the best platforms to find tech jobs?"
+2. "How do I network effectively in the tech industry?"
+3. "What are the best strategies for job hunting?"
+4. "How do I prepare for tech job interviews?"
+5. "What should I look for in a tech company?"
+
+# Skills Development
+1. "What technical skills are most in demand?"
+2. "How do I learn programming effectively?"
+3. "What are the best online resources for learning tech skills?"
+4. "How do I build a portfolio for tech jobs?"
+5. "What soft skills are important in tech careers?"
+
+# Interview Preparation
+1. "What are common technical interview questions?"
+2. "How do I prepare for coding interviews?"
+3. "What should I expect in a tech interview?"
+4. "How do I answer behavioral questions in tech interviews?"
+5. "What are the best practices for technical interviews?"
+
+# Career Growth
+1. "How do I advance in my tech career?"
+2. "What are the different career levels in tech?"
+3. "How do I negotiate a salary in tech?"
+4. "What certifications are valuable in tech?"
+5. "How do I switch careers to tech?"
+
+# Work-Life Balance
+1. "How do I maintain work-life balance in tech?"
+2. "What are the common challenges in tech careers?"
+3. "How do I handle stress in tech jobs?"
+4. "What are the best practices for remote work in tech?"
+5. "How do I avoid burnout in tech?"
+
+# Industry Trends
+1. "What are the current trends in the tech industry?"
+2. "How do I stay updated with tech developments?"
+3. "What are the future prospects in tech careers?"
+4. "How do emerging technologies affect tech careers?"
+5. "What are the growth areas in tech?"
+
+# Education and Training
+1. "Do I need a degree for a tech career?"
+2. "What are the best bootcamps for tech careers?"
+3. "How do I choose the right tech education path?"
+4. "What are the alternatives to traditional tech education?"
+5. "How do I validate my tech skills?"
+
+# Career Transition
+1. "How do I transition from non-tech to tech career?"
+2. "What are the steps to change tech specializations?"
+3. "How do I leverage my non-tech experience in tech?"
+4. "What are the challenges of career transition to tech?"
+5. "How do I prepare for a career change to tech?" 

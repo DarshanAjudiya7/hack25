@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advisor Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            height: calc(100vh - 250px);
+        }
+        .message {
+            max-width: 80%;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .user-message {
+            background-color: #3b82f6;
+            color: white;
+            margin-left: auto;
+        }
+        .bot-message {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .typing-indicator {
+            display: none;
+        }
+        .typing-indicator.active {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .suggested-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .suggested-question {
+            background-color: #e5e7eb;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .suggested-question:hover {
+            background-color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-blue-600 mb-2">Career Advisor</h1>
+            <p class="text-gray-600">Your personal guide to tech career success</p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-4 chat-container overflow-y-auto" id="chat-container">
+            <div class="message bot-message">
+                Hello! I'm your career advisor specializing in technology careers. I can help you with:
+                <ul class="list-disc pl-4 mt-2">
+                    <li>Career exploration and planning</li>
+                    <li>Resume and interview preparation</li>
+                    <li>Skills development guidance</li>
+                    <li>Industry trends and insights</li>
+                    <li>Career transition advice</li>
+                </ul>
+                <p class="mt-2">What would you like to know about tech careers?</p>
+            </div>
+        </div>
+
+        <div class="suggested-questions" id="suggested-questions">
+            <div class="suggested-question" onclick="useSuggestedQuestion(this)">How do I start a career in tech?</div>
+            <div class="suggested-question" onclick="useSuggestedQuestion(this)">What skills do I need for a tech job?</div>
+            <div class="suggested-question" onclick="useSuggestedQuestion(this)">How do I prepare for tech interviews?</div>
+            <div class="suggested-question" onclick="useSuggestedQuestion(this)">What are the best tech career paths?</div>
+        </div>
+
+        <div class="typing-indicator mt-4 text-gray-500" id="typing-indicator">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>Career advisor is typing...</span>
+        </div>
+
+        <div class="mt-4 flex">
+            <input type="text" id="user-input" 
+                   class="flex-1 p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   placeholder="Ask about tech careers, skills, or job search...">
+            <button id="send-button" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const suggestedQuestions = document.getElementById('suggested-questions');
+
+        function addMessage(message, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            messageDiv.innerHTML = message; // Changed to innerHTML to support formatting
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function useSuggestedQuestion(element) {
+            const question = element.textContent;
+            userInput.value = question;
+            sendMessage();
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // Add user message to chat
+            addMessage(message, true);
+            userInput.value = '';
+
+            // Show typing indicator
+            typingIndicator.classList.add('active');
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message }),
+                });
+
+                const data = await response.json();
+                addMessage(data.response, false);
+            } catch (error) {
+                addMessage('Sorry, there was an error processing your request.', false);
+            } finally {
+                // Hide typing indicator
+                typingIndicator.classList.remove('active');
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html> 
