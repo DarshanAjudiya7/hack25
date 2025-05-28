@@ -1,6 +1,4 @@
 
-
-```markdown
 # 🚀💻 Hack25 – The Ultimate Hackathon Project 💻🚀
 
 Welcome to **Hack25** – a dynamic fusion of creativity, code, and collaboration! 🎉  
@@ -26,13 +24,21 @@ Together, these technologies create a seamless and engaging user experience. �
 ```
 
 📦 hack25/
+
 ├── 📄 index.html
+
 ├── 🎨 styles/
+
 │   └── style.css
-├── 🧠 scripts/
+
+├── 🧠 scripts
+
 │   └── app.js
+
 ├── 🐍 backend/
+
 │   └── app.py
+
 └── 📄 README.md
 
 ````
