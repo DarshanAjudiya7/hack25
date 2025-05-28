@@ -112,6 +112,5 @@ Use it, learn from it, and build upon it!
 ---
 
 Made with ❤️, ☕, and a splash of hackathon magic by **Darshan Ajudiya** ✨
-
 ```
 
